@@ -129,23 +129,23 @@
               
               	  <p class="centered"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">zxzzhaoxuezhe</h5>
-              	  	
-                  <li class="mt">
-                      <a class="active" href="index.html">
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
                           <i class="fa fa-dashboard"></i>
                           <span>java</span>
                       </a>
+                      <ul class="sub">
+                          <li><a id="java/MulThread.html" onclick="changeIframeUrl(this)">多线程</a></li>
+                      </ul>
                   </li>
-
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>linux</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
+                          <li><a id="linux/BaseCommand.html" onclick="changeIframeUrl(this)">基本命令使用</a></li>
                       </ul>
                   </li>
 
@@ -155,9 +155,7 @@
                           <span>mysql</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
+                          <li><a  href="mysql/SqlAdvance.html">mysql 性能优化</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -166,9 +164,7 @@
                           <span>Redis</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                          <li><a  href="redis/Base.html">redis 基础</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -177,7 +173,7 @@
                           <span>Spring</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="form_component.html">Form Components</a></li>
+                          <li><a  href="spring/Spring_DI.html">依赖注入</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -186,8 +182,7 @@
                           <span>Spring MVC</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                          <li><a  href="#">spring MVC/Basic</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -196,8 +191,16 @@
                           <span>Mybatis</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
+                          <li><a  href="mybatis/Base.html">mybatis 入门</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Tomcat</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#">tomcat</a></li>
                       </ul>
                   </li>
 
@@ -214,7 +217,7 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<iframe id="mainFrame" name="mainFrame" scrolling="no" src="buttons.html" frameborder="0" style="padding: 0px; width: 100%; height: 1000px;"></iframe>
+          	<iframe id="mainFrame" name="mainFrame" scrolling="no" src="Home.html" frameborder="0" style="padding: 0px; width: 100%; height: 1000px;"></iframe>
           </section>
       </section>
       <!--main content end-->
@@ -307,7 +310,14 @@
         }
     </script>
  
- 
+ <script type="text/javascript">
+ 	function changeIframeUrl(obj){
+ 		alert("ll");
+ 		var url = obj.id;
+ 		document.getElementById("mainFrame").src=url;
+ 	}
+ </script>
+ <!-- iframe 自适应 -->
  <script type="text/javascript">
      startInit('mainFrame', 560);
 </script>
